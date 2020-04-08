@@ -1,0 +1,27 @@
+<div class="container-fluid">
+ 
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Fluid jumbo heading</h1>
+            <p class="lead">Jumbo helper text</p>
+            <hr class="my-2">
+            <p>More info</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="Jumbo action link" role="button">Jumbo action name</a>
+            </p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-3" *ngFor="let prod of products">
+           <mat-card>
+            <div style="height: 270px;background-repeat: no-repeat;background-size: cover;background-position: center;"
+            [style.background-image]="'url(assets/vespa.jpg)'"></div>
+               <mat-card-content class="card-body">
+                    <h3>{{prod.name}}</h3>
+                    <h2>{{prod.price}}</h2>
+               </mat-card-content>
+           </mat-card>
+        
+        </div>
+    </div>
+</div>

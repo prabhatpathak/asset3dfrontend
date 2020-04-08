@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="loginform" (submit)="loginSubmit(loginform.value)">
+                <mat-card class="mt-5">
+                    <mat-card-header>
+                        <p class="h4">Login Panel</p>
+                    </mat-card-header>
+                    <hr>
+                    <mat-card-content>
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="Mr. Anderson" formControlName="username">
+                            <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="Mr. Anderson" type="password" formControlName="password">
+                            <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
+                        </mat-form-field>
+    
+                        <button mat-raised-button class="btn-block mt-5" color="primary">Login Now</button>
+    
+                    </mat-card-content>
+                </mat-card>
+            </form>
+        </div>
+    </div>
+</div>

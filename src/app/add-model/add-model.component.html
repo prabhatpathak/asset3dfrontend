@@ -1,0 +1,69 @@
+
+    
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="modelform" (submit)="userSubmit(modelform.value)">
+                <mat-card class="mt-5">
+                    <mat-card-header>
+                        <p class="h4">MODEL DETAILS</p>
+                    </mat-card-header>
+                    <hr>
+                    <mat-card-content>
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Name</mat-label>
+                            <input matInput placeholder="Model Name" formControlName="name">
+                            <mat-error *ngIf="getControl().name.errors">Name required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Model Price</mat-label>
+                            <input matInput placeholder=" MODEL Price" formControlName="price">
+                            <mat-error *ngIf="getControl().price.errors"> Model Price</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>compatibility</mat-label>
+                            <input matInput placeholder="MODEL Compatibility" formControlName="compatibility">
+                            <mat-error *ngIf="getControl().compatibility.errors">compatibility required</mat-error>
+                        </mat-form-field>
+    
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Image_formate</mat-label>
+                            <input matInput placeholder="Image_formate" type="Image_formate" formControlName="image_formats">
+                            <mat-error *ngIf="getControl().image_formats.errors">Image_formate required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Size</mat-label>
+                            <input matInput placeholder="MODEL Size" type="size" formControlName="size">
+                            <mat-error *ngIf="getControl().size.errors"></mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>geometry</mat-label>
+                            <input matInput placeholder="MODEL Geometry" type="geometry" formControlName="geometry">
+                            <mat-error *ngIf="getControl().geometry.errors"></mat-error>
+                        </mat-form-field>
+     
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>vertices</mat-label>
+                            <input matInput placeholder="MODEL vertices" type="vertices" formControlName="vertices">
+                            <mat-error *ngIf="getControl().vertices.errors"></mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>texture</mat-label>
+                            <input matInput placeholder="MODEL Texture" type="texture" formControlName="textures">
+                            <mat-error *ngIf="getControl().textures.errors"></mat-error>
+                        </mat-form-field>
+
+                        <button mat-raised-button class="btn-block mt-5" color="primary">ADD NOW</button>
+    
+                    </mat-card-content>
+                </mat-card>
+            </form>
+        </div>
+    </div>
+</div>

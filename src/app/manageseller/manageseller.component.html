@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="sellerform" (submit)="sellerSubmit(sellerform.value)">
+                <mat-card class="mt-5">
+                    <mat-card-header>
+                        <p class="h4">SELLER's REGISTRATION</p>
+                    </mat-card-header>
+                    <hr>
+                    <mat-card-content>
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Name</mat-label>
+                            <input matInput placeholder="enter your name" formControlName="name">
+                            <mat-error *ngIf="getControl().name.errors">Name required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>contact</mat-label>
+                            <input matInput placeholder="enter your contact" formControlName="contact">
+                            <mat-error *ngIf="getControl().contact.errors">contact required</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="enter your email" formControlName="email">
+                            <mat-error *ngIf="getControl().email.errors">Email required</mat-error>
+                        </mat-form-field>
+    
+                       
+    
+                        <button mat-raised-button class="btn-block mt-5" color="primary">REGISTER</button>
+    
+                    </mat-card-content>
+                </mat-card>
+            </form>
+        </div>
+    </div>
+</div>
