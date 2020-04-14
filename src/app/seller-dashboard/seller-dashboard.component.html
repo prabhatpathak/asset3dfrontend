@@ -10,7 +10,10 @@
                             <h4>{{seller.email}}</h4>
 
                             <hr>
-                            <button (click)="togglemanageprofile()">Update Profile</button>
+                            
+                            <button mat-raised-button (click)="togglemanageprofile()">Update Profile</button>
+                            <button mat-raised-button (click)="toggleaddmodel()">Add Model</button>
+                            <button mat-raised-button (click)="togglemanagemodel()">Manage Model</button>
                 
 
                         </mat-card-content>
@@ -20,8 +23,52 @@
                     <mat-card *ngIf="showmanageprofile">
                         <mat-card-content class="card-body">
                             <h3>ManagerProfile</h3>
+                            
+
+
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-6">
+                                        <form [formGroup]="sellerform" (submit)="sellerSubmit(sellerform.value)">
+                                            <mat-card class="mt-5">
+                                                <mat-card-header>
+                                                    <p class="h4">Register Panel</p>
+                                                </mat-card-header>
+                                                <hr>
+                                                <mat-card-content>
+                                                    <mat-form-field appearance="outline" class="col-md">
+                                                        <mat-label>Name</mat-label>
+                                                        <input matInput placeholder="Mr. Anderson" formControlName="name">
+                                                        <mat-error *ngIf="getControl().name.errors">Name required</mat-error>
+                                                    </mat-form-field>
+                            
+                                                    <mat-form-field appearance="outline" class="col-md">
+                                                        <mat-label>Username</mat-label>
+                                                        <input matInput placeholder="Mr. Anderson" formControlName="username">
+                                                        <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
+                                                    </mat-form-field>
+                            
+                                                    <mat-form-field appearance="outline" class="col-md">
+                                                        <mat-label>Email</mat-label>
+                                                        <input matInput placeholder="Mr. Anderson" formControlName="email">
+                                                        <mat-error *ngIf="getControl().email.errors">Email required</mat-error>
+                                                    </mat-form-field>
+                            
+                                                </mat-card-content>
+                                            </mat-card>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            
                         </mat-card-content>
                     </mat-card>
+
+                    <app-add-model *ngIf="showaddmodel">
+                        
+                    </app-add-model>
                 </div>
             </div>
         </div>

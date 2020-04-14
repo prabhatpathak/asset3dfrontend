@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ManagePasswordComponent } from './manage-password/manage-password.component';
 import { ManagesellerComponent } from './manageseller/manageseller.component';
 import { BrowseComponent } from './browse/browse.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 
 
 const routes: Routes = [
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'footer',component : FooterComponent},
   { path: 'managePassword',component : ManagePasswordComponent},
   { path: 'manageseller',component :ManagesellerComponent},
-  { path: 'browse',component:BrowseComponent}
+  { path: 'browse',component:BrowseComponent},
+  { path: 'userdashboard',component:UserdashboardComponent}
 ];
 
 @NgModule({

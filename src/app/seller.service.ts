@@ -12,19 +12,21 @@ export class SellerService {
   constructor(
     private http: HttpClient
   ) { }
-  addseller(data){
-    return this.http.post(this.url+'/add', data);
+  addseller(data) {
+    return this.http.post(this.url + '/add', data);
   }
+  
   getsellerByemail(
     email
-  )
-  {
-    return this.http.get(this.url+'/getbyemail/'+email);
-}
- uploadImage(file): Observable<any>
-{
-return this.http.post(this.url+'/addimg',file)
-}
+  ) {
+    return this.http.get(this.url + '/getbyemail/' + email);
+  }
+  uploadImage(file): Observable<any> {
+    return this.http.post(this.url + '/addimg', file)
+  }
+  updateseller(id,data){
+    return this.http.put(this.url + '/update/'+id, data);
+  }
 }
 
 

@@ -1,0 +1,29 @@
+<div class="container-fluid mt-5"> 
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <mat-card> 
+                        <mat-card-content class="card-body">
+                <!-- <img [src]="user.avatar" class="rounded-circle"> -->
+                            <h4>Hello, {{user.name}}</h4>
+                            <h4>{{user.email}}</h4>
+
+                            <hr>
+                            <button (click)="togglemanageprofile()">Update Profile</button>
+                
+
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                <div class="col-md-8">
+                    <mat-card *ngIf="showmanageprofile">
+                        <mat-card-content class="card-body">
+                            <h3>ManagerProfile</h3>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

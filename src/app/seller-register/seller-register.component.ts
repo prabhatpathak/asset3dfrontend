@@ -3,6 +3,7 @@ import { from } from 'rxjs';
 import { Validators, FormBuilder } from '@angular/forms';
 import { SellerService } from '../seller.service';
 import Swal from 'sweetalert2'
+import {faLock} from "@fortawesome/free-solid-svg-icons"
 @Component({
   selector: 'app-seller-register',
   templateUrl: './seller-register.component.html',
@@ -15,7 +16,9 @@ sellerform;
      message:string;
      sellerService:any;
      selectedFiles:any;
-     avatarName;
+     avatarName:any;
+     lock=faLock;
+    
 
   constructor(private fb: FormBuilder, private sellerservice: SellerService) { }
   ngOnInit(): void {

@@ -25,7 +25,8 @@ import { HeaderComponent } from './header/header.component';
 import { BrowseComponent } from './browse/browse.component';
 import { FooterComponent } from './footer/footer.component';
 import { ManagePasswordComponent } from './manage-password/manage-password.component';
-import { ManagesellerComponent } from './manageseller/manageseller.component'
+import { ManagesellerComponent } from './manageseller/manageseller.component';
+import { UserdashboardComponent } from './userdashboard/userdashboard.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { ManagesellerComponent } from './manageseller/manageseller.component'
     BrowseComponent,
     FooterComponent,
     ManagePasswordComponent,
-    ManagesellerComponent
+    ManagesellerComponent,
+    UserdashboardComponent
   ],
   imports: [
     BrowserModule,
