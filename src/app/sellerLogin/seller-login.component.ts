@@ -18,13 +18,13 @@ loginform;
   }
   initForm(){
     this.loginform = this.fb.group({
-      username : ['', Validators.required],
+      email : ['', Validators.required],
       password : ['', Validators.required],
     })
   }
 
   loginSubmit(formdata){
-    this.sellerservice.getsellerByemail(formdata.username).subscribe(userobj=>{
+    this.sellerservice.getsellerByemail(formdata.email).subscribe(userobj=>{
       let logged_user = userobj;
       if(logged_user){
         if(logged_user['password'] == formdata['password']){

@@ -11,6 +11,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 
+
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
@@ -26,7 +27,10 @@ import { BrowseComponent } from './browse/browse.component';
 import { FooterComponent } from './footer/footer.component';
 import { ManagePasswordComponent } from './manage-password/manage-password.component';
 import { ManagesellerComponent } from './manageseller/manageseller.component';
-import { UserdashboardComponent } from './userdashboard/userdashboard.component'
+import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { PaymentComponent } from './payment/payment.component';
+import { ManagemodelComponent } from './managemodel/managemodel.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +45,10 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
     FooterComponent,
     ManagePasswordComponent,
     ManagesellerComponent,
-    UserdashboardComponent
+    UserdashboardComponent,
+    PaymentComponent,
+    ManagemodelComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -54,6 +61,7 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
     ReactiveFormsModule, 
     FormsModule,
     HttpClientModule,
+    MatExpansionModule,
     FontAwesomeModule,
     SweetAlert2Module
   ],

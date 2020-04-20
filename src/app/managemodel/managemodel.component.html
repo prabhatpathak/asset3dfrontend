@@ -1,0 +1,30 @@
+<mat-card>
+    <mat-card-content>
+        <table class="table">
+            <tbody>
+                <tr>
+                    <mat-accordion>
+                        <mat-expansion-panel *ngFor="let model of models">
+                            <mat-expansion-panel-header>
+                            <mat-panel-title>
+                              <!-- <img mat-card-avatar class="header" [src]="'http://localhost:3000/hostimages/'+host.avatar" style="padding: 5px;"> -->
+                                <p class="mx-auto">{{model.name}}</p>
+                            </mat-panel-title>
+                            <mat-panel-description>
+                                Booked {{model.city}}
+                            </mat-panel-description>
+                            
+                            </mat-expansion-panel-header>
+                            <p style="color: rgba(0, 0, 0, 0.678);">
+                              Name: {{model.name}}          <br>
+                              Username: {{model.Username}    <br>               
+                              Email: {{model.Email}} <br>       
+                              </p> 
+                             
+                        </mat-expansion-panel>
+                    </mat-accordion>
+                </tr>
+            </tbody>
+        </table>
+    </mat-card-content>
+</mat-card>

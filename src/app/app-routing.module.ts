@@ -12,6 +12,7 @@ import { ManagePasswordComponent } from './manage-password/manage-password.compo
 import { ManagesellerComponent } from './manageseller/manageseller.component';
 import { BrowseComponent } from './browse/browse.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 const routes: Routes = [
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'managePassword',component : ManagePasswordComponent},
   { path: 'manageseller',component :ManagesellerComponent},
   { path: 'browse',component:BrowseComponent},
-  { path: 'userdashboard',component:UserdashboardComponent}
+  { path: 'userdashboard',component:UserdashboardComponent},
+  { path: 'payment', component:PaymentComponent}
 ];
 
 @NgModule({
