@@ -18,6 +18,13 @@
                         </mat-form-field>
 
                         <mat-form-field appearance="outline" class="col-md">
+                            <mat-label>Username</mat-label>
+                            <input matInput placeholder="enter your username" formControlName="username">
+                            <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
+                        </mat-form-field>
+
+
+                        <mat-form-field appearance="outline" class="col-md">
                             <mat-label>contact</mat-label>
                             <input matInput placeholder="enter your contact" formControlName="contact">
                             <mat-error *ngIf="getControl().contact.errors">contact required</mat-error>

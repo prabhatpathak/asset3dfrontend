@@ -11,6 +11,12 @@
                     <a class="nav-link" *ngIf="!loggedin" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login </a>
                 </li>
         
+
+
+              <li class="nav-item active text-center">
+                <a class="nav-link" *ngIf="!loggedin" [routerLink]="['/sellerLogin']" routerLinkActive="router-link-active" >SellerLogin </a>
+            </li>
+
         
                 <li class="nav-item active text-center">
                   <a class="nav-link" *ngIf="loggedin" (click)="logout()" >Log out > </a>
