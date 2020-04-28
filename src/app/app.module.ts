@@ -31,6 +31,7 @@ import { UserdashboardComponent } from './userdashboard/userdashboard.component'
 import { PaymentComponent } from './payment/payment.component';
 import { ManagemodelComponent } from './managemodel/managemodel.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +49,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     UserdashboardComponent,
     PaymentComponent,
     ManagemodelComponent,
+    HomeComponent,
   
   ],
   imports: [

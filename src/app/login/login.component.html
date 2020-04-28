@@ -1,30 +1,28 @@
-<div class="container">
+<div class="container top-con">
     <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form [formGroup]="loginform" (submit)="loginSubmit(loginform.value)">
-                <mat-card class="mt-5">
-                    <mat-card-header>
-                        <p class="h4">Login Panel</p>
-                    </mat-card-header>
+                <div class="col-md-4">
+            <div class="card mt-5 bg-dark">
+                <div class="card-body text-light">
+                    
+                    <div class="text-center">
+                        <img src="assets/icon.png" style="height: 120px; width: 120px; margin-top: -5rem;" class="rounded-circle">
+                        <p class="h4">SIGN IN</p>
+                    </div>
+                    <form [formGroup]="loginform" (submit)="loginSubmit(loginform.value)">
+
+                        <label class="mt-4">Username</label>
+                        <input class="form-control" formControlName="username" required>
+                        
+ 
+                        <label class="mt-4">Password</label>
+                        <input class="form-control mb-5" formControlName="password" type="password" required>
+                        
+                        <button class="btn btn-danger btn-block mt-5">Login</button>
+                    </form>
                     <hr>
-                    <mat-card-content>
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>Username</mat-label>
-                            <input matInput placeholder="Mr. Anderson" formControlName="username">
-                            <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
-                        </mat-form-field>
-    
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>Password</mat-label>
-                            <input matInput placeholder="Mr. Anderson" type="password" formControlName="password">
-                            <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
-                        </mat-form-field>
-    
-                        <button mat-raised-button class="btn-block mt-5" color="primary">Login Now</button>
-    
-                    </mat-card-content>
-                </mat-card>
-            </form>
+                    <p [routerLink]="['/register']" routerLinkActive="router-link-active" >Register new Account</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>

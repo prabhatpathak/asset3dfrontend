@@ -13,6 +13,7 @@ import { ManagesellerComponent } from './manageseller/manageseller.component';
 import { BrowseComponent } from './browse/browse.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { PaymentComponent } from './payment/payment.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,8 @@ const routes: Routes = [
   { path: 'manageseller',component :ManagesellerComponent},
   { path: 'browse',component:BrowseComponent},
   { path: 'userdashboard',component:UserdashboardComponent},
-  { path: 'payment', component:PaymentComponent}
+  { path: 'payment', component:PaymentComponent},
+  { path: 'home',component:HomeComponent}
 ];
 
 @NgModule({

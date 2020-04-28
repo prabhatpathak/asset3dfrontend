@@ -1,60 +1,42 @@
-
-
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <form [formGroup]="sellerform" (submit)="sellerSubmit(sellerform.value)">
-                <mat-card class="mt-5">
-                    <fa-icon [icon]>lock</fa-icon>
-                    <mat-card-header>
-                        <p class="h4">SELLER's REGISTRATION</p>
-                    </mat-card-header>
+<div class="container" style="margin-top: 10rem;">
+    <div class="card bg-dark">
+        <div class="row justify-content-center card-body">
+            <div class="col-md-7 reg-top" [style.background-image]="'url(/assets/imgSLR.jpg)'">
+                <!-- <img src="assets/imgSLR.jpg" style="height: 25rem;"> -->
+                
+            </div>
+            <div class="col-md-5">
+                <div class="card-body text-light">
+                
+                    <p class="h2 text-center">SIGN UP</p>
                     <hr>
-                    <mat-card-content>
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>Name</mat-label>
-                            <input matInput placeholder="enter your name" formControlName="name">
-                            <mat-error *ngIf="getControl().name.errors">Name required</mat-error>
-                        </mat-form-field>
+                   
+            <form [formGroup]="sellerform" (submit)="sellerSubmit(sellerform.value)">
 
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>Username</mat-label>
-                            <input matInput placeholder="enter your username" formControlName="username">
-                            <mat-error *ngIf="getControl().username.errors">Username required</mat-error>
-                        </mat-form-field>
+                         <label class="mt-4">Name</label>
+                         <input class="form-control" formControlName="name" required>   
 
+                        <label class="mt-4">Username</label>
+                        <input class="form-control" formControlName="username" required>
+ 
+                        <label class="mt-4">Contact</label>
+                        <input class="form-control" formControlName="contact" required>
 
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>contact</mat-label>
-                            <input matInput placeholder="enter your contact" formControlName="contact">
-                            <mat-error *ngIf="getControl().contact.errors">contact required</mat-error>
-                        </mat-form-field>
+                        <label class="mt-4">Email</label>
+                        <input class="form-control" FormControlname="email" required>
+        
+                        <label class="mt-4">Password</label>
+                        <input class="form-control " formControlName="password" type="password" required>
 
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder="enter your email" formControlName="email">
-                            <mat-error *ngIf="getControl().email.errors">Email required</mat-error>
-                        </mat-form-field>
-    
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>Password</mat-label>
-                            <input matInput placeholder="Mr. Anderson" type="password" formControlName="password">
-                            <mat-error *ngIf="getControl().password.errors">Password required</mat-error>
-                        </mat-form-field>
-
-                        <mat-form-field appearance="outline" class="col-md">
-                            <mat-label>Confirm Password</mat-label>
-                            <input matInput placeholder="Mr. Anderson" type="password" formControlName="confirm">
-                            <mat-error *ngIf="getControl().confirm.errors">Password not matched</mat-error>
-                        </mat-form-field>
-    
-                        <button mat-raised-button class="btn-block mt-5" color="primary">REGISTER</button>
-                        <input type="file" (change)="uploadImage($event)">
-                        <img [src]="imgURL" >
-
-                    </mat-card-content>
-                </mat-card>
-            </form>
+                        <label class="mt-4">Confirm Password</label>
+                        <input class="form-control mb-5" formControlName="confirm"  type="password" required>
+                        
+                        <button class="btn btn-danger btn-block mt-5">Sign Up</button>
+                    </form>
+                    <hr>
+                    <a href="/signin">Already registered?</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
