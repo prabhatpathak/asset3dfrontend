@@ -1,5 +1,5 @@
 <div class="container-fluid">
- 
+
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-3">Fluid jumbo heading</h1>
@@ -19,6 +19,8 @@
                <mat-card-content class="card-body">
                     <h3>{{prod.name}}</h3>
                     <h2>{{prod.price}}</h2>
+                    <button class="btn btn-primary">Add To Cart</button>
+                    <button class="btn btn-primary" [routerLink]="['/browse',prod._id]" routerLinkActive="router-link-active" >view</button>
                </mat-card-content>
            </mat-card>
         

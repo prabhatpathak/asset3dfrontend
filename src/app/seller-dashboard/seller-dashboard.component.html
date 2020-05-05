@@ -1,4 +1,4 @@
-<div class ="container-fluid mt-5" *ngIf="seller"> 
+<div class="container-fluid mt-5"> 
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="row justify-content-center">
@@ -66,13 +66,8 @@
                         </mat-card-content>
                     </mat-card>
 
-                    <app-add-model *ngIf="showaddmodel">
-                        
-                    </app-add-model>
-
-                    <app-managemodel *ngIf="showmanagemodel">
-
-                    </app-managemodel>
+                    <app-add-model *ngIf="showaddmodel"></app-add-model>
+                    <app-managemodel *ngIf="showmanagemodel"></app-managemodel>
                 </div>
             </div>
         </div>

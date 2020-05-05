@@ -1,0 +1,31 @@
+<div class="container-fluid mt-5" *ngIf="admin"> 
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <mat-card> 
+                        <mat-card-content class="card-body">
+                            <!-- <img [src]="seller.avatar" class="rounded-circle"> -->
+                            <h4>Hello, {{admin.name}}</h4>
+                            <h4>{{admin.email}}</h4>
+ 
+                            <hr>
+                            <button (click)="togglemanageuser()">ManageUsers</button>
+                            <button (click)="togglemanageseller()">ManageSeller</button>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                
+                <div class="col-md-8">
+                    <mat-card>
+                        <mat-card-content class="card-body">
+                            
+                        </mat-card-content>
+                    </mat-card>
+                    <app-manageuser *ngIf="showmanageuser"></app-manageuser>
+                    <app-manageseller *ngIf="showmanageseller"></app-manageseller>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,7 +7,6 @@ import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule} from '@angular/material/button';
-import {MatCardModule} from '@angular/material/card';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 
@@ -32,6 +31,16 @@ import { PaymentComponent } from './payment/payment.component';
 import { ManagemodelComponent } from './managemodel/managemodel.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
+import { RenderComponent } from './render/render.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+import { AdminDashComponent } from './admin-dash/admin-dash.component';
+import { ManageuserComponent } from './manageuser/manageuser.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxStarRatingModule } from 'ngx-star-rating';
+import {MatCardModule} from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,6 +59,11 @@ import { HomeComponent } from './home/home.component';
     PaymentComponent,
     ManagemodelComponent,
     HomeComponent,
+    CartComponent,
+    RenderComponent,
+    ProductdetailsComponent,
+    AdminDashComponent,
+    ManageuserComponent,
   
   ],
   imports: [
@@ -65,7 +79,10 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     MatExpansionModule,
     FontAwesomeModule,
-    SweetAlert2Module
+    SweetAlert2Module,
+    MatCardModule,
+    NgbModule,
+    NgxStarRatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

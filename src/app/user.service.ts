@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 export class UserService {
 
   url = 'http://localhost:3000/user';
+  getallusers: any;
   constructor(private http: HttpClient, private router : Router) { }
 
   addUser(data){

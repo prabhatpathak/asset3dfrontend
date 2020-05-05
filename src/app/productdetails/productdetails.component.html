@@ -1,0 +1,75 @@
+<div class="container" *ngIf="product">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="'http://localhost:3000/'+product.image" class="img-fluid">
+        </div>
+        <div class="col-md-8">
+            <mat-card>
+                <mat-card-content class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="display-4">{{product.name}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p class="display-4"><strong>{{product.price}}</strong></p>
+                        </div>
+                    </div>
+                    <hr>
+                    <p class="h4">{{product.category}}</p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-5" *ngIf="product">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="row item">
+                    <div class="col-md-3">{{product.name}}</div>
+                    <div class="col-md-3">{{product.price}}</div>
+                    <div class="col-md-3">{{product.category}}</div>
+                    <div class="col-md-3"><img src="http://localhost:3000/products/{{product.image}}" class="img-fluid card-img-top" width="100px"></div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="card mt-3" *ngIf="currentUser">
+        <div class="card-body">
+            <div *ngFor = "let review of reviews">
+                <div *ngIf="review && review.user._id != currentUser._id">
+                    <p class="h3">{{review.user.name}}</p>
+                    <p class="h3">Stars : {{review.rating}}</p>
+                    <ngb-rating [rate]="review.rating" [readonly]="true" max = '5' style="color: rgb(0, 89, 255);"></ngb-rating>
+                    <p class="h3">{{review.review}}</p>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="card mt-3" *ngIf="currentUser">
+        <div class="card-body">
+            <p class="h2">{{currentUser.name}}, Add Review</p>
+            <form [formGroup]="reviewForm" (submit)="addReview(reviewForm.value)" *ngIf="reviewForm">
+
+                <label class="h3">Rating</label>
+                <!-- <input class="form-control" type="number" min="1" max="5" formControlName="rating"> -->
+                <ngx-star-rating formControlName="rating" [id]="'rating'"></ngx-star-rating>
+                <label class="h3">Review</label>
+                <textarea class="form-control" formControlName="review"></textarea>
+
+                <button mat-raised-button color="warning">Add Review</button>
+            </form>
+        </div>
+    </div>
+</div>

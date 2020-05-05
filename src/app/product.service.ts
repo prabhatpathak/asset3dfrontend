@@ -8,6 +8,10 @@ import { Observable } from 'rxjs';
 export class ProductService {
   
   url = 'http://localhost:3000/product'
+  getUserReview: any;
+  getAllReviews: any;
+  addReview: any;
+  getallproducts: any;
 
   constructor(private http: HttpClient) { }
   addProduct(data){

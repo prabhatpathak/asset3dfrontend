@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -14,6 +14,9 @@ import { BrowseComponent } from './browse/browse.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HomeComponent } from './home/home.component';
+import { RenderComponent } from './render/render.component';
+import { ProductdetailsComponent } from './productdetails/productdetails.component';
+
 
 
 const routes: Routes = [
@@ -30,8 +33,9 @@ const routes: Routes = [
   { path: 'browse',component:BrowseComponent},
   { path: 'userdashboard',component:UserdashboardComponent},
   { path: 'payment', component:PaymentComponent},
-  { path: 'home',component:HomeComponent}
-];
+  { path: 'home',component:HomeComponent},
+  { path: 'render',component:RenderComponent},
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
